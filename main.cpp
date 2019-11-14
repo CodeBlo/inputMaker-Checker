@@ -35,10 +35,10 @@ int main() {
     cin >> oname;
 
     if(os==0) {
-        string total="./cmpe250-assignment3 ../inputs/" + iname+ " ../outputs/" + oname;
+        string total="../Executable/cmpe250-assignment3 ../inputs/" + iname+ " ../outputs/" + oname;
         system(total.c_str());
     }else{
-        string total="cmpe250-assignment3.exe ../inputs/" + iname+ " ../outputs/" + oname;
+        string total="../Executable/cmpe250-assignment3.exe ../inputs/" + iname+ " ../outputs/" + oname;
         system(total.c_str());
     }
 }
