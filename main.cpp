@@ -1,23 +1,40 @@
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 int main() {
 
-    cout<<"Creating random input";
 
-    int x;
+
+    int os,random;
     cout<<"Make sure that your input file is at inputs and output file is at outputs directories"<<endl;
     cout<<"mac(0) or windows(1)";
-    cin >> x;
+    cin >> os;
+    cout<< "Random(0) or not(1)";
+    cin>> random;
     cout<< "Input file name:(Please add .txt to end)";
     string iname;
     string oname;
     cin >> iname;
 
+    if(random==0) {
+        string outfile="../inputs/"+iname;
+        ofstream outFile(outfile);
+        srand(time(NULL));
+        int N = rand() % 1001;
+        int M = rand() % 1001;
+        int Q = rand() % (N + M + 1);
+        cout << "Creating random input..." << endl;
+        outFile << N << " " << M << " " << Q << endl;
+        for (int i = 0; i < Q; i++) {
+            outFile << rand() % 3 + 1 << " " << (rand() % 2 == 0 ? "A" : "B") << rand() % 100001 << endl;
+        }
+        cout << "Random input created." << endl;
+    }
     cout<< "Output file name:(Please add .txt to end)";
     cin >> oname;
 
-    if(x==0) {
+    if(os==0) {
         string total="./cmpe250-assignment3 ../inputs/" + iname+ " ../outputs/" + oname;
         system(total.c_str());
     }else{
