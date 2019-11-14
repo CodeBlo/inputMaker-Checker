@@ -1,4 +1,6 @@
 # inputMaker-Checker
+This is an input maker-checker for BOUN Cmpe 250 Assignment 3. 
+
 Makes random inputs and gives the output if it is not an infinite loop. This is my code final code for assignment 3.
 It could be wrong. By using this program you take the full responsibility.
 
