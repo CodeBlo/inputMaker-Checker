@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-
+#include <random>
 using namespace std;
 int main() {
 
@@ -20,14 +20,16 @@ int main() {
     if(random==0) {
         string outfile="../inputs/"+iname;
         ofstream outFile(outfile);
-        srand(time(NULL));
-        int N = rand() % 1001;
-        int M = rand() % 1001;
-        int Q = rand() % (N + M + 1);
+        random_device rd;
+        mt19937 gen(rd());
+
+        int N = gen() % 1001;
+        int M = gen() % 1001;
+        int Q = gen() % (N + M + 1);
         cout << "Creating random input..." << endl;
         outFile << N << " " << M << " " << Q << endl;
         for (int i = 0; i < Q; i++) {
-            outFile << rand() % 3 + 1 << " " << (rand() % 2 == 0 ? "A" : "B") << rand() % 100001 << endl;
+            outFile << gen() % 3 + 1 << " " << (gen() % 2 == 0 ? "A" : "B") << gen() % 100001 << endl;
         }
         cout << "Random input created." << endl;
     }
