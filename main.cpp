@@ -23,7 +23,6 @@ int main() {
         }else {
             srand(time(0));
         }
-
         int N = rand()% 1001;
         int M = rand() % 1001;
         int Q = rand() % (N + M + 1);
@@ -41,7 +40,7 @@ int main() {
         string total="../Executable/cmpe250-assignment3 ../inputs/" + iname+ " ../outputs/" + oname;
         system(total.c_str());
     }else{
-        string total="../Executable/cmpe250-assignment3.exe ../inputs/" + iname+ " ../outputs/" + oname;
-        system(total.c_str());
+        string total="cmpe250-assignment3.exe ../inputs/" + iname+ " ../outputs/" + oname;
+        system(("cd .. & cd Executable & " + total).c_str() );
     }
 }
