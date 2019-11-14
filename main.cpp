@@ -23,6 +23,7 @@ int main() {
         }else {
             srand(time(0));
         }
+
         int N = rand()% 1001;
         int M = rand() % 1001;
         int Q = rand() % (N + M + 1);
