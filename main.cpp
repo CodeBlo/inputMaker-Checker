@@ -41,6 +41,6 @@ int main() {
         system(total.c_str());
     }else{
         string total="cmpe250-assignment3.exe ../inputs/" + iname+ " ../outputs/" + oname;
-        system(("cd .. & cd Executable & " + total).c_str() );
+        system(("cd .. & cd Executable & " + total).c_str());
     }
 }
