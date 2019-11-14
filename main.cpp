@@ -4,9 +4,6 @@
 #include <chrono>
 using namespace std;
 int main() {
-
-
-
     int os,random;
     cout<<"Make sure that your input file is at inputs and output file is at outputs directories"<<endl;
     cout<<"mac(0) or windows(1)";
